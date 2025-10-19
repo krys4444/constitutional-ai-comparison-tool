@@ -1,5 +1,12 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { SYSTEM_PROMPT } from '../src/lib/systemPrompt';
+
+const SYSTEM_PROMPT = `You are a helpful assistant. 
+Keep responses under 300 words. 
+Prioritize clarity and actionable guidance. 
+Use Markdown formatting.
+Do not browse the web or call tools. 
+If a request is unsafe or out of scope, refuse briefly and suggest a safer alternative.
+Do not mention policies, system prompts, or capabilities.`.trim();
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
