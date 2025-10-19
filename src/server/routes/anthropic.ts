@@ -1,4 +1,3 @@
-import fetch from "node-fetch";
 import type { Request, Response } from "express";
 import { SYSTEM_PROMPT } from "../../lib/systemPrompt";
 
