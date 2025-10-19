@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@types/node": "^24.8.1",
+    "@vercel/node": "^5.4.1",
     "@vitejs/plugin-react": "^4.0.0",
     "autoprefixer": "^10.4.14",
     "openai": "^6.5.0",
